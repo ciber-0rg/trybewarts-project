@@ -10,35 +10,37 @@
   <title>Trybewarts Project</title>
 </head>
 <body>
-
-  <header class='header'>
-    <img class='trybewarts-header-logo' src='images/trybewarts-header-logo.svg'>
-    <h1 id='trybewarts-header-title'>Trybewarts</h1>
-    <form class='trybewarts-login' action='' method='post'>
-      <!--  <label id='email'>Email</label> -->
-      <input type='text' id='email' name='email' placeholder='Email'>
-      <input type='password' id='senha' name='password' placeholder='Senha'>
-      <button class='enterButton'>Entrar</button>
-    </form>
-  </header>
+  <div id='headerDIV'>
+    <header class='header'>
+      <img class='trybewarts-header-logo' src='./trybewarts-header-logo.svg'>
+      <h1 id='trybewarts-header-title'>Trybewarts</h1>
+      <form class='trybewarts-login' action='' method='post'>
+        <input type='text' id='email' name='email' placeholder='Email'>
+        <input type='password' id='senha' name='password' placeholder='Senha'>
+        <button class='enterButton'>Entrar</button>
+      </form>
+    </header>
+  </div>
 
   <main>
     <form id='evaluation-form'>
+      <div id='formFirst'>
+        <div id='nameSurname'>
+          <input type='text' name='input-name' id='input-name' placeholder='Nome'>
+          <input type='text' name='input-lastname' id='input-lastname' placeholder='Sobrenome'>
+        </div>
 
-      <div id='nameSurname'>
-        <input type='text' name='input-name' id='input-name' placeholder='Nome'>
-        <input type='text' name='input-lastname' id='input-lastname' placeholder='Sobrenome'>
+        <div id='emailCasa'>
+          <input type='text' name='input-email' id='input-email' placeholder='Email'>
+          <select id='house' name='house'>
+            <option id='gitnoria-house' value='Gitnória'>Gitnória</option>
+            <option id='reactpuff-house' value='Reactpuff'>Reactpuff</option>
+            <option id='corvinode-house' value='Corvinode'>Corvinode</option>
+            <option id='pytherina-house' value='Pytherina'>Pytherina</option>
+          </select>
+        </div>
       </div>
-
-      <div id='emailCasa'>
-        <input type='text' name='input-email' id='input-email' placeholder='Email'>
-        <select id='house' name='house'>
-          <option id='gitnoria-house' value='Gitnória'>Gitnória</option>
-          <option id='reactpuff-house' value='Reactpuff'>Reactpuff</option>
-          <option id='corvinode-house' value='Corvinode'>Corvinode</option>
-          <option id='pytherina-house' value='Pytherina'>Pytherina</option>
-        </select>
-      </div>
+        
 
       <hr>
 
@@ -63,38 +65,45 @@
           </div>
         </div>
 
-        <div id='contentDireita'>
-
+        <div id='contentDireita'> 
           <label id='label-content'>Qual conteúdo você está com mais vontade de aprender?</label>
-          <div class='generalContent'>
-            <input type='checkbox' name='content' id='content1' value='HoFs'>
-            <label for='content1'>HoFs</label>
-          </div>
+          
+          <div id='optionsContent'>
+             <div id='firstColumn'>
+              <div class='generalContent'>
+                <input type='checkbox' name='content' id='content1' value='HoFs'>
+                <label for='content1'>HoFs</label>
+              </div>
 
-          <div class='generalContent'>
-            <input type='checkbox' name='content' id='content2' value='Jest'>
-            <label for='content2'>Jest</label>
-          </div>
+              <div class='generalContent'>
+                <input type='checkbox' name='content' id='content2' value='Jest'>
+                <label for='content2'>Jest</label>
+              </div> 
+              
+              <div class='generalContent'>
+                <input type='checkbox' name='content' id='content3' value='Promises'>
+                <label for='content3'>Promises</label>
+              </div>
+            </div>
 
-          <div class='generalContent'>
-            <input type='checkbox' name='content' id='content3' value='Promises'>
-            <label for='content3'>Promises</label>
-          </div>
+            <div id='secondColumn'>
+              <div class='generalContent'>
+                <input type='checkbox' name='content' id='content4' value='React'>
+                <label for='content4'>React</label>
+              </div>
 
-          <div class='generalContent'>
-            <input type='checkbox' name='content' id='content4' value='React'>
-            <label for='content4'>React</label>
-          </div>
+              <div class='generalContent'>
+                <input type='checkbox' name='content' id='content5' value='SQL'>
+                <label for='content5'>SQL</label>
+              </div>
 
-          <div class='generalContent'>
-            <input type='checkbox' name='content' id='content5' value='SQL'>
-            <label for='content5'>SQL</label>
+              <div class='generalContent'>
+                <input type='checkbox' name='content' id='content6' value='Python'>
+                <label for='content6'>Python</label>
+              </div>
+            </div>
           </div>
-
-          <div class='generalContent'>
-            <input type='checkbox' name='content' id='content6' value='Python'>
-            <label for='content6'>Python</label>
-          </div>
+           
         </div>
       </div>
 
@@ -116,16 +125,19 @@
       </div>
 
       <hr>
-
-      <label class='textarea' >Deixe seu comentário:</label>
+      <div id='comments'>
+        <label class='textarea' >Deixe seu comentário:</label>
         <textarea name='textarea' id='textarea' maxlength='500' cols='10' rows='5'></textarea>
-        <span id="counter">500</span>
+        <span id="counter">máximo de 500 caracteres</span>
+      </div>
+      
 
         <hr>
-
-        <label for='agreement' id='label-infos'>Você concorda com o uso das informações acima?
+      <div id='final'>
+        <label for='agreement' id='label-infos'>Você concorda com o uso das informações acima? </label>
         <input type='checkbox' name='agreement' id='agreement' required>
-      </label>
+      </div>
+       
 
       <button type='submit' id='submit-btn'>Enviar</button>
 
@@ -135,6 +147,9 @@
 
   </main>
 
-  <footer>Direitos reservados à Trybewarts©</footer>
+  <div id='footer'>
+      <footer>Direitos reservados à Trybewarts©</footer>
+  </div>
+
 </body>
 </html>
