@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  height: 50px;
+  justify-content: space-between;
+}
+
+.trybewarts-login {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 60%;
+  align-items: center;
+}
+
+h1 {
+  font-family: Wolfpack Halloweed Regular, sans-serif;
+  margin: 2px;
+  letter-spacing: 1.5pt;
+}
+
+main {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#emailCasa {
+  flex-direction: row;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+  margin: 10px;
+}
+
+#label-family {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.generalContent {
+  display: flex;
+  flex-direction: row;
+}
+
+#contentDireita {
+  margin: 10px;
+}
+
+#secondPartForms {
+  display: flex;
+  flex-direction: row;
+}
+
+#thirdPartForms {
+  display: flex;
+  flex-direction: row;
+}
